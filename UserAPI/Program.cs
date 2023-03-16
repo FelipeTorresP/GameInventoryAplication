@@ -6,11 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 internal class Program
 {
-
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-
 
         // Add services to the container.
         builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
@@ -36,11 +34,9 @@ internal class Program
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
-
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-
 
         app.UseHttpsRedirection();
 
@@ -50,5 +46,4 @@ internal class Program
 
         app.Run();
     }
-
 }

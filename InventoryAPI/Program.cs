@@ -1,12 +1,8 @@
 using GameBackEnd.Application.Inventory.ApplicationServices;
 using IdentityAutenticator.Data;
 using Infrastructure.Identity;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
-
 
 internal class Program
 {
@@ -27,7 +23,6 @@ internal class Program
         {
             options.AddPolicy("RequireLoggedIn", policy => policy.RequireAuthenticatedUser());
         });
-
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

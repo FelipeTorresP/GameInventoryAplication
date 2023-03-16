@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using ApplicationServices;
-using ApplicationServices.Dto;
+﻿using ApplicationServices.Dto;
 using ApplicationServices.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

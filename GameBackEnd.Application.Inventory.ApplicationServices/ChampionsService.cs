@@ -1,10 +1,5 @@
 ﻿using GameBackEnd.Application.Inventory.ApplicationServices.Dto;
 using IdentityAutenticator;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameBackEnd.Application.Inventory.ApplicationServices
 {
@@ -19,7 +14,6 @@ namespace GameBackEnd.Application.Inventory.ApplicationServices
 
         public async Task<IEnumerable<ChampionDto>> GetChampions(string userId)
         {
-
             var inventory = await _championRepository.GetChampionsByUserId(userId);
 
             return inventory.Select(c => new ChampionDto
@@ -29,7 +23,7 @@ namespace GameBackEnd.Application.Inventory.ApplicationServices
                 Description = c.Description,
                 Stats = c.Stats,
                 Levels = c.Level,
-                Ascension = c.Attributes.Ascension?? "",
+                Ascension = c.Attributes.Ascension ?? "",
                 Claws = c.Attributes.Claws ?? "",
                 CoreEssence = c.Attributes.CoreEssence ?? "",
                 Divinity = c.Attributes.Divinity ?? "",

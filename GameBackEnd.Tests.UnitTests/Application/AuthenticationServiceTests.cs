@@ -1,11 +1,9 @@
 ﻿using ApplicationServices.Dto;
 using ApplicationServices.Interfaces;
-using GameBackEnd.Tests.UnitTests.Utils;
 using IdentityAutenticator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Moq;
-
 
 namespace GameBackEnd.Tests.UnitTests.Utils
 {
@@ -57,6 +55,5 @@ namespace GameBackEnd.Tests.UnitTests.Utils
             Assert.IsFalse(result.Success);
             CollectionAssert.Contains(result.Errors.ToList(), "Invalid Password");
         }
-
     }
 }

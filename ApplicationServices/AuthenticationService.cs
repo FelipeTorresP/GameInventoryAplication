@@ -1,7 +1,6 @@
 ﻿using ApplicationServices.Dto;
 using IdentityAutenticator;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
 
 namespace ApplicationServices.Interfaces
 {
@@ -31,7 +30,7 @@ namespace ApplicationServices.Interfaces
                     Errors = new[] { "User does not exist" }
                 };
             }
-            SignInResult result = await _signInManager.PasswordSignInAsync(user.UserName?? "", loginDto.Password, false, lockoutOnFailure: false);
+            SignInResult result = await _signInManager.PasswordSignInAsync(user.UserName ?? "", loginDto.Password, false, lockoutOnFailure: false);
             if (!result.Succeeded)
             {
                 return new AuthenticationResponse
@@ -44,7 +43,7 @@ namespace ApplicationServices.Interfaces
             return new AuthenticationResponse
             {
                 Token = token,
-                Success= result.Succeeded,
+                Success = result.Succeeded,
             };
         }
 

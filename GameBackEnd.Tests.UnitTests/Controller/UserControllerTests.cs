@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
-using ApplicationServices;
-using ApplicationServices.Dto;
+﻿using ApplicationServices.Dto;
 using ApplicationServices.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using UserApi.Controllers;
 
@@ -47,7 +44,6 @@ namespace UserApi.Tests
             // Arrange
             var expectedResponse = new AuthenticationResponse { Success = false };
             var loginDto = new LoginDto() { User = "user1", Password = "Password" };
-
 
             _authenticationServiceMock.Setup(x => x.LoginAsync(loginDto)).ReturnsAsync(expectedResponse);
 

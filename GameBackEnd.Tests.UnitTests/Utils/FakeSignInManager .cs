@@ -4,17 +4,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameBackEnd.Tests.UnitTests.Utils
 {
     public class FakeSignInManager : SignInManager<ApplicationUser>
     {
-
         public FakeSignInManager(UserManager<ApplicationUser> userManager, IHttpContextAccessor contextAccessor,
             IUserClaimsPrincipalFactory<ApplicationUser> claimsFactory, IOptions<IdentityOptions> optionsAccessor,
             ILogger<SignInManager<ApplicationUser>> logger, IAuthenticationSchemeProvider schemes,
@@ -27,6 +21,5 @@ namespace GameBackEnd.Tests.UnitTests.Utils
         {
             return SignInResult.Success;
         }
-
     }
 }

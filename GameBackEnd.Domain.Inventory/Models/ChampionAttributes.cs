@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameBackEnd.Domain.Inventory.Models
+﻿namespace GameBackEnd.Domain.Inventory.Models
 {
     public class ChampionAttributes
     {

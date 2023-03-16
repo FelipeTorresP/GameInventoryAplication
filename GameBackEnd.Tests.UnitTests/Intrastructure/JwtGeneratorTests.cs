@@ -5,7 +5,6 @@ using Moq;
 
 namespace GameBackEnd.Tests.UnitTests.Intrastructure
 {
-
     [TestClass]
     public class JwtGeneratorTests
     {

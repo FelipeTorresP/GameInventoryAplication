@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System.Reflection.Emit;
 
 namespace IdentityAutenticator.Data
 {
@@ -16,6 +15,7 @@ namespace IdentityAutenticator.Data
         public DbSet<Champion> Champions { get; set; }
         public override DbSet<IdentityUserClaim<string>> UserClaims { get; set; }
         public override DbSet<ApplicationUser> Users { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -41,7 +41,7 @@ namespace IdentityAutenticator.Data
             builder.Entity<Champion>().HasData(
                 new Champion
                 {
-                    Id ="23",
+                    Id = "23",
                     Name = "Champion 1",
                     Description = "Description of Champion 1",
                     Stats = 1,
@@ -59,7 +59,7 @@ namespace IdentityAutenticator.Data
                         Tail = "Tail 1",
                         Wings = "Wings 1"
                     },
-                    UserId= "user1"
+                    UserId = "user1"
                 },
                 new Champion
                 {
