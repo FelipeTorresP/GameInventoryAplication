@@ -10,7 +10,7 @@ Otras ventajas pueden incluir la reducción de acoplamiento entre los diferentes
 
 ## Autenticacion
 
-Claro que sí. JWT (JSON Web Tokens) fue elegido como método de autenticación porque es una forma segura y eficiente de transmitir información de identidad entre diferentes sistemas o servicios. Al utilizar JWT, se genera un token que contiene información del usuario autenticado, como su identificador único, y se firma digitalmente con una clave secreta. De esta forma, el token puede ser verificado por otros servicios y se puede estar seguro de que la información es válida y no ha sido modificada.
+JWT (JSON Web Tokens) fue elegido como método de autenticación porque es una forma segura y eficiente de transmitir información de identidad entre diferentes sistemas o servicios. Al utilizar JWT, se genera un token que contiene información del usuario autenticado, como su identificador único, y se firma digitalmente con una clave secreta. De esta forma, el token puede ser verificado por otros servicios y se puede estar seguro de que la información es válida y no ha sido modificada.
 
 Además, se añadió la posibilidad de probar los endpoints protegidos con JWT en el Swagger, utilizando un botón de "Authorize" que permite incluir el token de autenticación en las solicitudes. Esto facilita las pruebas manuales y la depuración de los endpoints protegidos por autenticación JWT, ya que se puede generar el token fácilmente y probar su validez.
 
