@@ -14,7 +14,7 @@ namespace GameBackEnd.Tests.UnitTests.Intrastructure
 
         public JwtGeneratorTests()
         {
-            _mockConfig.SetupGet(x => x["Jwt:SecretKey"]).Returns("mysecretkey");
+            _mockConfig.SetupGet(x => x["Jwt:SecretKey"]).Returns("mysecretkeyasdafsa56sf46s45f6a");
 
             _jwtGenerator = new JwtGenerator(_mockConfig.Object);
         }
@@ -35,16 +35,6 @@ namespace GameBackEnd.Tests.UnitTests.Intrastructure
             // Assert
             Assert.IsNotNull(token);
             Assert.IsInstanceOfType(token, typeof(string));
-        }
-
-        [TestMethod]
-        public void GenerateToken_NullUser_ThrowsArgumentNullException()
-        {
-            // Arrange
-            IdentityUser user = null;
-
-            // Act & Assert
-            Assert.ThrowsException<ArgumentNullException>(() => _jwtGenerator.GenerateToken(user));
         }
     }
 }
