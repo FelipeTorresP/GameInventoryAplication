@@ -3,8 +3,6 @@ using IdentityAutenticator;
 using IdentityAutenticator.Data;
 using Infrastructure.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 internal class Program
 {
@@ -16,16 +14,12 @@ internal class Program
 
         // Add services to the container.
         builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
-       
+
         builder.Services.AddControllers();
 
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
              options.UseInMemoryDatabase("MyDatabase"));
         builder.Services.AddInfrastructureIdentity(builder.Configuration);
-
-
-
-
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();

@@ -42,6 +42,7 @@ namespace Infrastructure.Identity
             });
 
             services.AddScoped<IJwtGenerator, JwtGenerator>();
+            services.AddScoped<IChampionRepository, ChampionRepository>();
 
             return services;
         }
